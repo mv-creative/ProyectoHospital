@@ -22,7 +22,7 @@ public class Main {
 
             System.out.println("1. Ingresar medicos al grupo de guardia");
             System.out.println("2. Crear base de informacion SAD");
-            System.out.println("3. Opcion 3");
+            System.out.println("3. Registrar paciente");
             System.out.println("4. Salir");
 
             System.out.println("Escribe una de las opciones");
@@ -36,7 +36,7 @@ public class Main {
                 miHospital.crearBaseInfoSAD();
                 break;
             case 3:
-                System.out.println("Has seleccionado la opcion 3");
+                miHospital.registrarPaciente();
                 break;
             case 4:
                 salir = true;

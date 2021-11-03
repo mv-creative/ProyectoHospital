@@ -46,7 +46,7 @@ public class Hospital {
         opcion = entrada.nextInt();
         guardiaDeTurno.addMedico(new Medico(especialidad.get(opcion - 1), nombre, apellido));
         System.out.println("Medico agregado exitosamente");
-        entrada.close();
+
     }
 
     public void crearBaseInfoSAD() {
@@ -68,7 +68,23 @@ public class Hospital {
         System.out.println("Opcion: ");
         opcion = entrada.nextInt();
         especialidad.get(opcion - 1).addRespuestastrue(pregunta);
-        // entrada.close();
+
+    }
+
+    public void registrarPaciente() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Registrar paciente nuevo");
+        System.out.println();
+        System.out.print("Nombre: ");
+        String nombre = entrada.nextLine();
+        System.out.print("Apellido: ");
+        String apellido = entrada.nextLine();
+        System.out.print("Edad: ");
+        int edad = entrada.nextInt();
+        System.out.print("Telefono: ");
+        int telefono = entrada.nextInt();
+        SADhospital.preguntar();
+
     }
 
     private baseInfoSAD SADhospital;

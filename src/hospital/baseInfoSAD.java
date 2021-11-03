@@ -30,12 +30,13 @@ public class baseInfoSAD {
         Scanner entrada = new Scanner(System.in);
         for (Pregunta preguntaActual : preguntas) {
             System.out.println(preguntaActual.getPregunta());
+            System.out.println("SI/No");
             preguntaActual.setRespuesta(entrada.nextLine());
             if (preguntaActual.getRespuesta()) {
                 respuestasTrue.add(preguntaActual);
             }
         }
-        entrada.close();
+        // entrada.close();
     }
 
     public void listar() {
