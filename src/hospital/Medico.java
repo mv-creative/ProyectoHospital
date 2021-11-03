@@ -5,15 +5,18 @@
  */
 package hospital;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Kenshin
  */
-public class Medico extends Persona{
+public class Medico extends Persona {
 
     public Medico(Especialidad especialidad, String _nombre, String _Apellido) {
         super(_nombre, _Apellido);
         this.especialidad = especialidad;
+        pacientesEnEspera = new ArrayList<Paciente>();
     }
 
     public Especialidad getEspecialidad() {
@@ -23,9 +26,8 @@ public class Medico extends Persona{
     public void setEspecialidad(Especialidad especialidad) {
         this.especialidad = especialidad;
     }
-    
-    
-    
+
+    private ArrayList<Paciente> pacientesEnEspera;
     private Especialidad especialidad;
-    
+
 }

@@ -11,5 +11,29 @@ package hospital;
  */
 public class Especialidad {
     private String nombre;
-    private static int personasAtendidas;
+    private int numeroPreguntas;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getNumeroPreguntas() {
+        return numeroPreguntas;
+    }
+
+    public void setNumeroPreguntas(int numeroPreguntas) {
+        this.numeroPreguntas = numeroPreguntas;
+    }
+
+    public Especialidad(String nombre, int numeroPreguntas) {
+        this.nombre = nombre;
+        this.numeroPreguntas = numeroPreguntas;
+    }
+
+    public Especialidad() {
+    }
 }
