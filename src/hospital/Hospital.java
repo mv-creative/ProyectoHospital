@@ -67,8 +67,8 @@ public class Hospital {
         System.out.println();
         System.out.println("Opcion: ");
         opcion = entrada.nextInt();
-        especialidad[opcion-1]
-
+        especialidad.get(opcion - 1).addRespuestastrue(pregunta);
+        // entrada.close();
     }
 
     private baseInfoSAD SADhospital;

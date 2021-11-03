@@ -36,6 +36,7 @@ public class Especialidad {
     // }
 
     public Especialidad(String nombre) {
+        SADespecialidades = new baseInfoSAD();
         this.nombre = nombre;
 
     }
