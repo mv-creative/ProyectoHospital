@@ -36,7 +36,7 @@ public class baseInfoSAD {
 
     public void listar() {
         for (Pregunta PreguntaActual : preguntas) {
-            System.out.println(PreguntaActual);
+            System.out.println(PreguntaActual.getPregunta());
         }
     }
 

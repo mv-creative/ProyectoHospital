@@ -42,7 +42,7 @@ public class Paciente extends Persona {
 
     public void mostrarDiagnostico() {
         for (Pregunta preguntaActual : diagnostico) {
-
+            System.out.println(preguntaActual.toString());
         }
     }
 
