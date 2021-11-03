@@ -28,6 +28,7 @@ public class CuerpoDeGuardia {
 
     public void addMedico(Medico newMedico) {
         medicosDeGuaridia.add(newMedico);
+        setNumeroMedicosDeGuardia();
     }
 
     public void listarMedicos() {

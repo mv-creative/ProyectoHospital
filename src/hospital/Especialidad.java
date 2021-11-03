@@ -11,7 +11,7 @@ package hospital;
  */
 public class Especialidad {
     private String nombre;
-    private int numeroPreguntas;
+    // private int numeroPreguntas;
 
     public String getNombre() {
         return nombre;
@@ -21,19 +21,17 @@ public class Especialidad {
         this.nombre = nombre;
     }
 
-    public int getNumeroPreguntas() {
-        return numeroPreguntas;
-    }
+    // public int getNumeroPreguntas() {
+    // return numeroPreguntas;
+    // }
 
-    public void setNumeroPreguntas(int numeroPreguntas) {
-        this.numeroPreguntas = numeroPreguntas;
-    }
+    // public void setNumeroPreguntas(int numeroPreguntas) {
+    // this.numeroPreguntas = numeroPreguntas;
+    // }
 
-    public Especialidad(String nombre, int numeroPreguntas) {
+    public Especialidad(String nombre) {
         this.nombre = nombre;
-        this.numeroPreguntas = numeroPreguntas;
+
     }
 
-    public Especialidad() {
-    }
 }
