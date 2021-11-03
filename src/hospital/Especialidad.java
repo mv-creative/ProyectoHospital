@@ -11,6 +11,7 @@ package hospital;
  */
 public class Especialidad {
     private String nombre;
+    private baseInfoSAD SADespecialidades;
     // private int numeroPreguntas;
 
     public String getNombre() {
@@ -18,7 +19,12 @@ public class Especialidad {
     }
 
     public void setNombre(String nombre) {
+        SADespecialidades = new baseInfoSAD();
         this.nombre = nombre;
+    }
+
+    public void addRespuestastrue(String pregunta) {
+        SADespecialidades.addRespuestaTrue(pregunta);
     }
 
     // public int getNumeroPreguntas() {

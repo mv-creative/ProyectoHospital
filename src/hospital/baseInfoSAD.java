@@ -22,6 +22,10 @@ public class baseInfoSAD {
         preguntas.add(new Pregunta(pregunta));
     }
 
+    public void addRespuestaTrue(String pregunta) {
+        respuestasTrue.add(new Pregunta(pregunta));
+    }
+
     public void preguntar() {
         Scanner entrada = new Scanner(System.in);
         for (Pregunta preguntaActual : preguntas) {

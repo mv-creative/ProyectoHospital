@@ -14,6 +14,7 @@ import java.util.*;
 public class Hospital {
     public Hospital() {
         guardiaDeTurno = new CuerpoDeGuardia();
+        SADhospital = new baseInfoSAD();
         // medicos = new ArrayList<Medico>();
         especialidad = new ArrayList<Especialidad>();
         especialidad.add(new Especialidad("Cardiologia"));
@@ -28,6 +29,8 @@ public class Hospital {
         int contador = 1;
         int opcion = -1;
         Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingresar medico al cuerpo de guardia");
+        System.out.println();
         System.out.print("Nombre: ");
         String nombre = entrada.nextLine();
         System.out.print("Apellido: ");
@@ -46,6 +49,29 @@ public class Hospital {
         entrada.close();
     }
 
+    public void crearBaseInfoSAD() {
+        int contador = 1;
+        int opcion = -1;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Creando Base info SAD");
+        System.out.println();
+        System.out.println("Ingrese una pregunta de control");
+        String pregunta = entrada.nextLine();
+        SADhospital.addPregunta(pregunta);
+        System.out.println();
+        System.out.println("Seleccione especialidad correspondiente a la pregunta");
+        for (Especialidad especialidadActual : especialidad) {
+            System.out.println(contador + ". " + especialidadActual.getNombre());
+            contador++;
+        }
+        System.out.println();
+        System.out.println("Opcion: ");
+        opcion = entrada.nextInt();
+        especialidad[opcion-1]
+
+    }
+
+    private baseInfoSAD SADhospital;
     private CuerpoDeGuardia guardiaDeTurno;
     // private ArrayList<Medico> medicos;
     private ArrayList<Especialidad> especialidad;
