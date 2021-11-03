@@ -46,6 +46,11 @@ public class Paciente extends Persona {
         }
     }
 
+    @Override
+    public String toString() {
+        return super.getNombre() + " " + super.getApellido() + ", " + edad + " años";
+    }
+
     private int edad;
     private int telefono;
     private ArrayList<Pregunta> diagnostico;

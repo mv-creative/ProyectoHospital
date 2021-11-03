@@ -17,6 +17,16 @@ public class Medico extends Persona {
         super(_nombre, _Apellido);
         this.especialidad = especialidad;
         pacientesEnEspera = new ArrayList<Paciente>();
+        numeroAtendidos = 0;
+        numeroEnEspera = 0;
+    }
+
+    public void setNumeroAtendidos() {
+        numeroAtendidos++;
+    }
+
+    public void setNumeroEnEspera() {
+        numeroEnEspera++;
     }
 
     public Especialidad getEspecialidad() {
@@ -27,7 +37,28 @@ public class Medico extends Persona {
         this.especialidad = especialidad;
     }
 
+    public int getNumeroAtendidos() {
+        return numeroAtendidos;
+    }
+
+    public int getNumeroEnEspera() {
+        return numeroEnEspera;
+    }
+
+    public void listarPacientes() {
+        int numeroPaciente = 1;
+        for (Paciente pacienteActual : pacientesEnEspera) {
+            System.out.println(numeroPaciente + ". " + pacienteActual.toString());
+        }
+    }
+
+    public void addPaciente(Paciente nuevoPaciente) {
+        pacientesEnEspera.add(nuevoPaciente);
+    }
+
     private ArrayList<Paciente> pacientesEnEspera;
     private Especialidad especialidad;
+    private int numeroAtendidos;
+    private int numeroEnEspera;
 
 }
